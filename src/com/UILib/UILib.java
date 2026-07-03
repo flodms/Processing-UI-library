@@ -35,6 +35,7 @@ import static processing.event.MouseEvent.*;
 import static processing.event.KeyEvent.*;
 import processing.event.*;
 
+
 /**
  * This is a template class and can be used to start a new processing library or tool.
  * Make sure you rename this class as well as the name of the example package 'template' 
@@ -85,7 +86,7 @@ public class UILib {
 
 	public void mouseEvent(MouseEvent event) {
 		if( event.getAction() == CLICK) {
-			println("click");
+			//println("click");
 		} else if (event.getAction() == MouseEvent.PRESS) {
 			for(Textfield tf : allTextfields) {
 				if (tf.isVisible ) tf.onClick();
