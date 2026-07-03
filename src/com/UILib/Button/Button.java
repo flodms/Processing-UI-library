@@ -26,6 +26,8 @@ public class Button {
     int color = 255;
     int strokeColor = 0;
 
+    public int cornerRadius = 0;
+
     public boolean isVisible = true;
     public boolean isAutoDraw = true;
 
@@ -54,7 +56,7 @@ public class Button {
         parent.rectMode(parent.CENTER);
         parent.fill(color);
         parent.stroke(strokeColor);
-        parent.rect(x,y,w,h);
+        parent.rect(x,y,w,h,cornerRadius);
         if(isPressed()) {
             parent.fill(parent.color(150,100));
             parent.rect(x,y,w,h);
@@ -124,13 +126,19 @@ public class Button {
      * @param newText the text
      */
     public void setText(String newText) {this.text=newText;}
+
+    /**
+     * Makes the button rounded on the corners
+     * @param radius the radius of the round corners
+     */
+    public void roundCorners(int radius) {this.cornerRadius = radius;}
+
     /**
      * Returns the background color (color) and the utline color (strokeColor)
      *
      * @return	array of both color ans stroke color: [color,strokeColor]
      *
      */
-
 
     public int[] getColors() {
         int[] colors = {color,strokeColor};
