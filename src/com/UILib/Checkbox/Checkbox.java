@@ -32,6 +32,6 @@ public class Checkbox extends Button {
     }
 
     public void onClick() {
-        isChecked = !isChecked;
+        if(super.isMouseOver()) isChecked = !isChecked;
     }
 }
